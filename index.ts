@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import Svg, { Rect } from 'react-native-svg';
 
 const randseed = new Array(4);
 
-class Blockie extends Component {
+class Blockie extends React.Component {
 
-  seedrand(seed) {
+  seedrand(seed: string) {
     for (let i = 0; i < randseed.length; i++) {
       randseed[i] = 0;
     }
@@ -36,7 +36,7 @@ class Blockie extends Component {
     return color;
   }
 
-  createImageData(size) {
+  createImageData(size: number) {
     const width = size;
     const height = size;
 
@@ -66,7 +66,7 @@ class Blockie extends Component {
     return data;
   }
 
-  renderIcon(size, scale) {
+  renderIcon(size: number, scale: number) {
     const seed = this.props.seed || Math.floor((Math.random()*Math.pow(10,16))).toString(16);
 
     this.seedrand(seed);
