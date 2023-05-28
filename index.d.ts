@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-export declare type BlockiesProps {
+export declare type BlockiesProps = {
   seed: string;
   color?: string;
   bgcolor?: string;
