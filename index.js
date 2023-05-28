@@ -5,7 +5,7 @@ const randseed = new Array(4);
 
 class Blockie extends React.Component {
 
-  seedrand(seed: string) {
+  seedrand(seed) {
     for (let i = 0; i < randseed.length; i++) {
       randseed[i] = 0;
     }
@@ -36,7 +36,7 @@ class Blockie extends React.Component {
     return color;
   }
 
-  createImageData(size: number) {
+  createImageData(size) {
     const width = size;
     const height = size;
 
@@ -66,7 +66,7 @@ class Blockie extends React.Component {
     return data;
   }
 
-  renderIcon(size: number, scale: number) {
+  renderIcon(size, scale) {
     const seed = this.props.seed || Math.floor((Math.random()*Math.pow(10,16))).toString(16);
 
     this.seedrand(seed);
